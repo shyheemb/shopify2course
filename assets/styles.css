@@ -143,6 +143,10 @@ table {
 .header1 a:hover {
   color: #e63b49;
 }
+.header1__collections-nav {
+  margin-bottom: 0;
+  padding-left: 0;
+}
 .header1__collections-nav a {
   display: inline-block;
   padding-right: 20px;
@@ -203,6 +207,10 @@ table {
 }
 .header2 a:hover {
   color: #e63b49 !important;
+}
+.header2__collections-nav {
+  margin-bottom: 0;
+  padding-left: 0;
 }
 .header2__collections-nav a {
   display: inline-block;
@@ -265,6 +273,10 @@ table {
 .header3 a:hover {
   color: #e63b49;
 }
+.header3__collections-nav {
+  margin-bottom: 0;
+  padding-left: 0;
+}
 .header3__collections-nav a {
   display: inline-block;
   padding-right: 20px;
@@ -325,6 +337,10 @@ table {
 }
 .header4 a:hover {
   color: #e63b49;
+}
+.header4__collections-nav {
+  margin-bottom: 0;
+  padding-left: 0;
 }
 .header4__collections-nav a {
   display: inline-block;
