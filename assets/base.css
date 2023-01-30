@@ -2356,11 +2356,6 @@ product-info .loading-overlay:not(.hidden) ~ *,
   color: rgba(var(--color-foreground), 0.75);
 }
 
-.header__heading-logo {
-  height: auto;
-  width: 100%;
-  transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
-}
 
 @media screen and (max-width: 989px) {
   .header__heading,
