@@ -7,12 +7,12 @@
         "image1": "shopify:\/\/shop_images\/pexels-photo-6626903.jpg",
         "background1": "#f61212",
         "opacity1": 29,
-        "button_label1": "Button label",
+        "button_label1": "Mens",
         "button_link1": "",
         "image2": "shopify:\/\/shop_images\/pexels-photo-10479007.webp",
         "background2": "#deff15",
-        "opacity2": 23,
-        "button_label2": "Button label",
+        "opacity2": 31,
+        "button_label2": "Womens",
         "button_link2": ""
       }
     },
