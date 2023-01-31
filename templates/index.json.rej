@@ -1,0 +1,26 @@
+diff a/templates/index.json b/templates/index.json	(rejected hunks)
+@@ -39,11 +39,24 @@
+         "template--17728417268027__b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a-167518984557e6e4f4-2"
+       ],
+       "settings": {
++<<<<<<< HEAD
+         "hero_height": "25vh",
+         "image": "shopify:\/\/shop_images\/pexels-photo-947422.jpg",
+         "background": "#000000",
+         "opacity": 50,
+         "info_alignment": "center"
++=======
++        "image": "shopify:\/\/shop_images\/self-serve-coffee-shop.jpg",
++        "image_overlay_opacity": 40,
++        "image_height": "large",
++        "desktop_content_position": "middle-center",
++        "show_text_box": false,
++        "desktop_content_alignment": "center",
++        "color_scheme": "background-1",
++        "mobile_content_alignment": "center",
++        "stack_images_on_mobile": false,
++        "show_text_below": false
++>>>>>>> 75362b52304fcc737ce65c967e1f2f1fb5232b13
+       }
+     },
+     "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c": {
