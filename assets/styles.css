@@ -603,6 +603,12 @@ table {
   cursor: pointer;
   overflow: hidden;
 }
+.collection1__product-img--cover img {
+  object-fit: cover;
+}
+.collection1__product-img--contain img {
+  object-fit: contain;
+}
 .collection1__product-img:hover img {
   transform: scale(1.3);
 }
