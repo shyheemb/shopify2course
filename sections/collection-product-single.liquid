@@ -56,6 +56,7 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	{% else %}
 		<h1>Show demo</h1>
 		<div class="collection collection1">
@@ -173,6 +174,213 @@
 				"type": "collection",
 				"id": "collection",
 				"label": "Featured collection"
+=======
+		
+		{% endfor %}
+{{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
+{{ 'component-rte.css' | asset_url | stylesheet_tag }}
+
+<div class="hero hero1 hero1--aligned-{{ section.settings.info_alignment }} hero1--{{ section.settings.hero_height }}">
+    
+    {%- if product.images[0] != blank -%}
+        <img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0] | img_url: '165x' }} 165w,{%- endif -%}
+          {%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
+          {%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
+          {%- if product.images[0].width >= 720 -%}{{ product.images[0] | img_url: '720x' }} 720w,{%- endif -%}
+          {%- if product.images[0].width >= 940 -%}{{ product.images[0] | img_url: '940x' }} 940w,{%- endif -%}
+          {%- if product.images[0].width >= 1070 -%}{{ product.images[0] | img_url: '2000x' }} 2000w{%- endif -%}"
+          src="{{ product.images[0] | img_url: '533x' }}"
+          sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+          alt="{{ product.images[0].alt | escape }}"
+          loading="lazy"
+          width="{{ product.images[0].width }}"
+          height="{{ product.images[0].height }}"
+          class="hero1__bg"
+        >
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+      {% assign opacity = section.settings.opacity | divided_by: 100.00 %}
+      <div class="hero1__content-container" 
+        style="background-color: {{ section.settings.background | color_modify: 'alpha', opacity  }}">
+        <div class="hero1__info">
+            {%- for block in section.blocks -%}
+                {% case block.type %}
+                  {%- when 'heading' -%}
+                    <h1 class="hero1__title hero1__title--{{ block.settings.title_size }}">
+                        {{ block.settings.title | escape }} </h1>
+                  {%- when 'paragraph' -%}
+                    <p class="hero1__paragraph">{{ block.settings.paragraph }}</p>
+                  {%- when 'button' -%}
+                    {%- if block.settings.button_text != blank -%}
+                        <a href="{{ block.settings.button_link }}" class="hero1__button" 
+                            {{ block.shopify_attributes }}> 
+                        
+                            {{ block.settings.button_text | escape }}
+                       
+                    </a>
+                     
+                    {%- endif -%}
+                {%- endcase -%}
+              {%- endfor -%}
+        
+            </div>
+    </div>
+</div>
+
+{% schema %}
+{
+	"name": "Collection Products ",
+	"class": "section",
+	"disabled_on": {
+		"groups": ["header", "footer"]
+	},
+	"settings": [{
+			"type": "select",
+			"id": "hero_height",
+			"options": [{
+					"value": "25vh",
+					"label": "25%"
+				},
+				{
+					"value": "50vh",
+					"label": "50%"
+				},
+				{
+					"value": "75vh",
+					"label": "75%"
+				},
+				{
+					"value": "100vh",
+					"label": "100%"
+				}
+			],
+			"default": "100vh",
+			"label": "Height"
+		},
+		{
+			"type": "collection",
+			"id": "collection",
+			"label": "Collection"
+		},
+		{
+			"type": "select",
+			"id": "image_fit",
+			"options": [{
+					"value": "cover",
+					"label": "Cover"
+				},
+				{
+					"value": "contain",
+					"label": "Contain"
+				}
+			],
+			"default": "cover",
+			"label": "Product Image Fit"
+		}, {
+			"type": "color",
+			"id": "background",
+			"label": "Background",
+			"default": "#000000"
+		},
+		{
+			"type": "range",
+			"id": "opacity",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"label": "Opacity",
+			"default": 50
+		},
+		{
+			"type": "select",
+			"id": "info_alignment",
+			"options": [{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			],
+			"default": "center",
+			"label": "Content Alignment"
+		}
+	],
+	"blocks": [{
+			"type": "heading",
+			"name": "t:sections.image-with-text.blocks.heading.name",
+			"limit": 1,
+			"settings": [{
+					"type": "text",
+					"id": "title",
+					"label": "Title",
+					"default": "Title"
+				},
+				{
+					"type": "select",
+					"id": "title_size",
+					"options": [{
+							"value": "sm",
+							"label": "Small"
+						},
+						{
+							"value": "md",
+							"label": "Medium"
+						},
+						{
+							"value": "lg",
+							"label": "Large"
+						},
+						{
+							"value": "xl",
+							"label": "Extra Large"
+						}
+					],
+					"default": "md",
+					"label": "Font Size"
+				}
+			]
+		},
+		{
+			"type": "paragraph",
+			"name": "Paragraph",
+			"limit": 1,
+			"settings": [{
+				"type": "textarea",
+				"id": "paragraph",
+				"label": "Paragraph",
+				"default": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+			}]
+		},
+		{
+			"type": "button",
+			"name": "Button",
+			"limit": 1,
+			"settings": [{
+					"type": "url",
+					"id": "button_link",
+					"label": "Button Link"
+				},
+				{
+					"type": "text",
+					"id": "button_text",
+					"label": "Button Text",
+					"default": "View More"
+				}
+			]
+		}
+	],
+	"presets": [{
+		"name": "Collection Products",
+		"blocks": [{
+				"type": "heading"
+>>>>>>> 23cae40f18791d69cdd689b10a36f08878912548
 			},
 			{
 				"type": "range",
