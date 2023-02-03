@@ -592,16 +592,38 @@ table {
 .collection1 {
   padding: 50px 0;
 }
+.collection1 div[class*="col-"] {
+  margin-bottom: 1rem;
+}
 .collection1__product-img {
   position: relative;
   background: #edeff5;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 550px;
   margin-bottom: 10px;
   cursor: pointer;
   overflow: hidden;
+  z-index: 1;
+}
+.collection1__product-img--circle,
+.collection1__product-img--square {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 1.5rem;
+}
+.collection1__product-img--circle {
+  border-radius: 50%;
+}
+.collection1__product-img--rectangle {
+  width: 100%;
+  height: 550px;
+  margin: 0 auto 1.5rem;
+}
+.collection1__product-img .img-link {
+  display: block;
+  width: 70%;
+  height: 100%;
 }
 .collection1__product-img--cover img {
   object-fit: cover;
@@ -623,6 +645,7 @@ table {
   font-size: 1.4rem;
   color: #a8a8c1;
   transition: all 0.3 ease-in-out;
+  z-index: 2;
   cursor: pointer;
 }
 .collection1__heart:hover {
@@ -660,67 +683,6 @@ table {
   background: red;
 }
 .collection1__color--yellow {
-  background: #ff0;
-}
-.collection2 {
-  padding: 50px 0;
-}
-.collection2__product-img {
-  position: relative;
-  background: #edeff5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 550px;
-  margin-bottom: 10px;
-}
-.collection2__product-img img {
-  max-width: 70%;
-}
-.collection2__heart {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.4rem;
-  color: #a8a8c1;
-  transition: all 0.3 ease-in-out;
-  cursor: pointer;
-}
-.collection2__heart:hover {
-  color: #fb6f92;
-  transform: scale(1.2);
-}
-.collection2__product-info {
-  display: flex;
-  justify-content: space-between;
-}
-.collection2__product-title {
-  font-size: 1.2rem;
-  font-weight: 700;
-  display: block;
-}
-.collection2__product-price {
-  font-size: 1rem;
-  font-weight: 400;
-}
-.collection2__colors {
-  display: flex;
-}
-.collection2__color {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-.collection2__color--black {
-  background: #000;
-}
-.collection2__color--blue {
-  background: blue;
-}
-.collection2__color--red {
-  background: red;
-}
-.collection2__color--yellow {
   background: #ff0;
 }
 .collection3 {
@@ -6393,7 +6355,7 @@ progress {
   }
 }
 body {
-  background-color: #f7f9fd;
+  background-color: #e1e4ea !important;
 }
 a {
   transition: all 0.3s ease-in-out;

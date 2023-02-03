@@ -16,41 +16,52 @@
         "button_link2": ""
       }
     },
-    "43679c74-a022-422f-89fd-c8923bcd3de4": {
+    "826c4e9d-ff57-4329-82b3-b98287c8d243": {
       "type": "collection-group",
       "blocks": {
-        "template--17728417268027__43679c74-a022-422f-89fd-c8923bcd3de4-1675210702705b7b55-0": {
-          "type": "heading",
+        "f31e2a0f-9056-4c3c-b87d-955294dd966a": {
+          "type": "featured_collection",
           "settings": {
-            "title": "Title",
-            "title_size": "md"
+            "collection": "dr-martens"
           }
         },
-        "template--17728417268027__43679c74-a022-422f-89fd-c8923bcd3de4-1675210702705b7b55-1": {
-          "type": "paragraph",
+        "fd6b2aca-be0e-4a53-9bb7-7ebad1fc9c29": {
+          "type": "featured_collection",
           "settings": {
-            "paragraph": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+            "collection": "nike"
           }
         },
-        "template--17728417268027__43679c74-a022-422f-89fd-c8923bcd3de4-1675210702705b7b55-2": {
-          "type": "button",
+        "4d385e40-bff6-4d31-a800-8d1a248d1a1b": {
+          "type": "featured_collection",
           "settings": {
-            "button_link": "",
-            "button_text": "View More"
+            "collection": "supra"
+          }
+        },
+        "516a296e-f50a-4fbe-a8c2-e3ce52dcf3a9": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "timberland"
           }
         }
       },
       "block_order": [
-        "template--17728417268027__43679c74-a022-422f-89fd-c8923bcd3de4-1675210702705b7b55-0",
-        "template--17728417268027__43679c74-a022-422f-89fd-c8923bcd3de4-1675210702705b7b55-1",
-        "template--17728417268027__43679c74-a022-422f-89fd-c8923bcd3de4-1675210702705b7b55-2"
+        "f31e2a0f-9056-4c3c-b87d-955294dd966a",
+        "fd6b2aca-be0e-4a53-9bb7-7ebad1fc9c29",
+        "4d385e40-bff6-4d31-a800-8d1a248d1a1b",
+        "516a296e-f50a-4fbe-a8c2-e3ce52dcf3a9"
       ],
       "settings": {
-        "hero_height": "100vh",
-        "collection": "nike",
-        "background": "#000000",
-        "opacity": 50,
-        "info_alignment": "center"
+        "container_shape": "circle",
+        "image_fit": "contain",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "show_colors": true,
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
       }
     },
     "b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a": {
@@ -83,6 +94,25 @@
         "info_alignment": "center"
       }
     },
+    "f9f5b31e-8e62-4ba5-839b-59955f3b02f9": {
+      "type": "collection-product-single",
+      "settings": {
+        "collection": "nike",
+        "total_products": 6,
+        "container_shape": "rectangle",
+        "image_fit": "contain",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "show_colors": true,
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
+        "sm_col": "col-sm-6"
+      }
+    },
     "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c": {
       "type": "hero-two",
       "settings": {
@@ -102,8 +132,9 @@
   },
   "order": [
     "a31aa2f3-4285-4aab-91c0-8dc36e87ffc0",
-    "43679c74-a022-422f-89fd-c8923bcd3de4",
+    "826c4e9d-ff57-4329-82b3-b98287c8d243",
     "b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a",
+    "f9f5b31e-8e62-4ba5-839b-59955f3b02f9",
     "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c"
   ]
 }
