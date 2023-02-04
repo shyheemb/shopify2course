@@ -16,41 +16,23 @@
         "button_link2": ""
       }
     },
-<<<<<<< HEAD
     "826c4e9d-ff57-4329-82b3-b98287c8d243": {
       "type": "collection-group",
       "blocks": {
         "f31e2a0f-9056-4c3c-b87d-955294dd966a": {
           "type": "featured_collection",
-=======
-    "f9f5b31e-8e62-4ba5-839b-59955f3b02f9": {
-      "type": "collection-product-single",
-      "blocks": {
-        "template--17728417268027__f9f5b31e-8e62-4ba5-839b-59955f3b02f9-16752171859d5cba1c-0": {
-          "type": "heading",
->>>>>>> 23cae40f18791d69cdd689b10a36f08878912548
           "settings": {
             "collection": "dr-martens"
           }
         },
-<<<<<<< HEAD
         "fd6b2aca-be0e-4a53-9bb7-7ebad1fc9c29": {
           "type": "featured_collection",
-=======
-        "template--17728417268027__f9f5b31e-8e62-4ba5-839b-59955f3b02f9-16752171859d5cba1c-1": {
-          "type": "paragraph",
->>>>>>> 23cae40f18791d69cdd689b10a36f08878912548
           "settings": {
             "collection": "nike"
           }
         },
-<<<<<<< HEAD
         "4d385e40-bff6-4d31-a800-8d1a248d1a1b": {
           "type": "featured_collection",
-=======
-        "template--17728417268027__f9f5b31e-8e62-4ba5-839b-59955f3b02f9-16752171859d5cba1c-2": {
-          "type": "button",
->>>>>>> 23cae40f18791d69cdd689b10a36f08878912548
           "settings": {
             "collection": "supra"
           }
@@ -63,37 +45,22 @@
         }
       },
       "block_order": [
-<<<<<<< HEAD
         "f31e2a0f-9056-4c3c-b87d-955294dd966a",
         "fd6b2aca-be0e-4a53-9bb7-7ebad1fc9c29",
         "4d385e40-bff6-4d31-a800-8d1a248d1a1b",
         "516a296e-f50a-4fbe-a8c2-e3ce52dcf3a9"
       ],
       "settings": {
-        "container_shape": "circle",
+        "container_shape": "square",
         "image_fit": "contain",
         "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
-        "show_colors": true,
         "xxl_col": "col-xxl-3",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-6",
         "sm_col": "col-sm-6"
-=======
-        "template--17728417268027__f9f5b31e-8e62-4ba5-839b-59955f3b02f9-16752171859d5cba1c-0",
-        "template--17728417268027__f9f5b31e-8e62-4ba5-839b-59955f3b02f9-16752171859d5cba1c-1",
-        "template--17728417268027__f9f5b31e-8e62-4ba5-839b-59955f3b02f9-16752171859d5cba1c-2"
-      ],
-      "settings": {
-        "hero_height": "100vh",
-        "collection": "nike",
-        "image_fit": "contain",
-        "background": "#000000",
-        "opacity": 50,
-        "info_alignment": "center"
->>>>>>> 23cae40f18791d69cdd689b10a36f08878912548
       }
     },
     "b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a": {
@@ -138,6 +105,7 @@
         "show_title": true,
         "show_price": true,
         "show_colors": true,
+        "color_shape": "circle",
         "xxl_col": "col-xxl-4",
         "xl_col": "col-xl-4",
         "lg_col": "col-lg-4",
@@ -160,17 +128,34 @@
         "button_label2": "Womens",
         "button_link2": ""
       }
+    },
+    "64e6be00-910e-45d8-9ef7-2082abd7baa2": {
+      "type": "collection-product-single-two",
+      "settings": {
+        "collection": "nike",
+        "total_products": 16,
+        "container_shape": "square",
+        "image_fit": "contain",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "show_colors": true,
+        "color_shape": "square",
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-6",
+        "sm_col": "col-sm-6"
+      }
     }
   },
   "order": [
     "a31aa2f3-4285-4aab-91c0-8dc36e87ffc0",
-<<<<<<< HEAD
     "826c4e9d-ff57-4329-82b3-b98287c8d243",
-=======
-    "f9f5b31e-8e62-4ba5-839b-59955f3b02f9",
->>>>>>> 23cae40f18791d69cdd689b10a36f08878912548
     "b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a",
     "f9f5b31e-8e62-4ba5-839b-59955f3b02f9",
-    "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c"
+    "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c",
+    "64e6be00-910e-45d8-9ef7-2082abd7baa2"
   ]
 }

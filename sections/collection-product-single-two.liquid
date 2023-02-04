@@ -1,14 +1,15 @@
 {% if section.settings.collection.all_products_count %}
-	<div class="collection collection1">
+	<div class="collection collection3">
 		<div class="container">
 			<div class="row">
 				{%- for product in section.settings.collection.products limit: section.settings.total_products -%}
 				<div class="{{ section.settings.xxl_col }} {{ section.settings.xl_col }} {{ section.settings.lg_col }} {{ section.settings.md_col }} {{ section.settings.sm_col }}">
-					<div class="collection1__collection-item">
+					<div class="collection3__collection-item">
 						{% assign opacity = section.settings.opacity | divided_by: 100.00 %}
-						<div class="collection1__product-img collection1__product-img--{{section.settings.container_shape}} collection1__product-img--{{section.settings.image_fit}}" 
+						<div class="collection3__product-img collection3__product-img--{{section.settings.container_shape}} 
+						collection3__product-img--{{section.settings.image_fit}}" 
 						style="background-color: {{ section.settings.background | color_modify: 'alpha', opacity  }}">
-							<div class="collection1__heart"
+							<div class="collection3__heart"
 								{% if section.settings.container_shape == "circle" %}
 									style="top: 35px; right: 60px;"
 									{% endif %}
@@ -27,30 +28,44 @@
 										loading="lazy"
 										width="{{ product.images[0].width }}"
 										height="{{ product.images[0].height }}"
-										class="hero1__bg"
+										class="collection3__img-front"
+									>
+									<img srcset="{%- if product.images[1].width >= 165 -%}{{ product.images[1]  | img_url: '165x' }} 165w,{%- endif -%}
+										{%- if product.images[1].width >= 360 -%}{{ product.images[1] | img_url: '360x' }} 360w,{%- endif -%}
+										{%- if product.images[1].width >= 535 -%}{{ product.images[1] | img_url: '535x' }} 535w,{%- endif -%}
+										{%- if product.images[1].width >= 720 -%}{{ product.images[1] | img_url: '720x' }} 720w,{%- endif -%}
+										{%- if product.images[1].width >= 940 -%}{{ product.images[1] | img_url: '940x' }} 940w,{%- endif -%}
+										{%- if product.images[1].width >= 1070 -%}{{ product.images[1] | img_url: '2000x' }} 2000w{%- endif -%}"
+										src="{{ product.images[1] | img_url: '533x' }}"
+										sizes="(min-width: 1100px) 2000px, (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)"
+										alt="{{ product.images[1].alt | escape }}"
+										loading="lazy"
+										width="{{ product.images[1].width }}"
+										height="{{ product.images[1].height }}"
+										class="collection3__img-back"
 									>
 								</a>
 							{%- else -%}
 								{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
 							{%- endif -%}
 						</div>
-						<div class="collection1__product-info">
-							<div class="collection1__product-details">
+						<div class="collection3__product-info">
+							<div class="collection3__product-details">
 								{%- if section.settings.show_title == true -%}
-								<span class="collection1__product-title">
+								<span class="collection3__product-title">
 									{{product.title | truncate: 15, ''}}
 								</span>
 								{%- endif -%}
 								{%- if section.settings.show_price == true -%}
-								<span class="collection1__product-price">
+								<span class="collection3__product-price">
 									{{product.price | money_with_currency}}
 								</span>
 								{%- endif -%}
 							</div>
 							{%if section.settings.show_colors  == true %}
-							<div class="collection1__colors">
+							<div class="collection3__colors">
 								{% for color_option in product.options_by_name['Color'].values %}
-									<div class="collection1__color" style="background-color:{{color_option }};
+									<div class="collection3__color" style="background-color:{{color_option }};
 										{% if section.settings.color_shape == "circle" %} border-radius: 50%;{% endif %}">
 									</div>
 								  {% endfor %}
@@ -65,13 +80,13 @@
 	</div>
 	{% else %}
 		<h1>Show demo</h1>
-		<div class="collection collection1">
+		<div class="collection collection3">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
-						<div class="collection1__collection-item">
-							<div class="collection1__product-img collection1__product-img--rectangle">
-								<div class="collection1__heart"><i class="far fa-heart"></i></div>
+						<div class="collection3__collection-item">
+							<div class="collection3__product-img collection3__product-img--rectangle">
+								<div class="collection3__heart"><i class="far fa-heart"></i></div>
 								<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
 										{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
 										{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
@@ -87,20 +102,20 @@
 										class="hero1__bg"
 									>
 							</div>
-							<div class="collection1__product-info">
-								<div class="collection1__product-details"><span class="collection1__product-title">Product</span><span
-										class="collection1__product-price">$250</span></div>
-								<div class="collection1__colors">
-									<div class="collection1__color collection1__color--blue"></div>
-									<div class="collection1__color collection1__color--black"></div>
+							<div class="collection3__product-info">
+								<div class="collection3__product-details"><span class="collection3__product-title">Product</span><span
+										class="collection3__product-price">$250</span></div>
+								<div class="collection3__colors">
+									<div class="collection3__color collection3__color--blue"></div>
+									<div class="collection3__color collection3__color--black"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="collection1__collection-item">
-							<div class="collection1__product-img collection1__product-img--rectangle">
-								<div class="collection1__heart"><i class="far fa-heart"></i></div>
+						<div class="collection3__collection-item">
+							<div class="collection3__product-img collection3__product-img--rectangle">
+								<div class="collection3__heart"><i class="far fa-heart"></i></div>
 								<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
 										{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
 										{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
@@ -116,20 +131,20 @@
 										class="hero1__bg"
 									>
 							</div>
-							<div class="collection1__product-info">
-								<div class="collection1__product-details"><span class="collection1__product-title">Product</span><span
-										class="collection1__product-price">$250</span></div>
-								<div class="collection1__colors">
-									<div class="collection1__color collection1__color--blue"></div>
-									<div class="collection1__color collection1__color--white"></div>
+							<div class="collection3__product-info">
+								<div class="collection3__product-details"><span class="collection3__product-title">Product</span><span
+										class="collection3__product-price">$250</span></div>
+								<div class="collection3__colors">
+									<div class="collection3__color collection3__color--blue"></div>
+									<div class="collection3__color collection3__color--white"></div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
-						<div class="collection1__collection-item">
-							<div class="collection1__product-img collection1__product-img--rectangle">
-								<div class="collection1__heart"><i class="far fa-heart"></i></div>
+						<div class="collection3__collection-item">
+							<div class="collection3__product-img collection3__product-img--rectangle">
+								<div class="collection3__heart"><i class="far fa-heart"></i></div>
 								<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
 										{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
 										{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}
@@ -145,9 +160,9 @@
 										class="hero1__bg"
 									>
 							</div>
-							<div class="collection1__product-info">
-								<div class="collection1__product-details"><span class="collection1__product-title">Product</span><span
-										class="collection1__product-price">$250</span>
+							<div class="collection3__product-info">
+								<div class="collection3__product-details"><span class="collection3__product-title">Product</span><span
+										class="collection3__product-price">$250</span>
 										<div>
 											{% for block in section.blocks %}
 												{% case block.type %}
@@ -157,9 +172,9 @@
 											{% endfor %}
 										</div>
 								</div>
-								<div class="collection1__colors">
-									<div class="collection1__color collection1__color--blue"></div>
-									<div class="collection1__color collection1__color--white"></div>
+								<div class="collection3__colors">
+									<div class="collection3__color collection3__color--blue"></div>
+									<div class="collection3__color collection3__color--white"></div>
 								</div>
 							</div>
 						</div>
@@ -172,7 +187,7 @@
 	
 	{% schema %}
 	{
-		"name": "Collection Products 1",
+		"name": "Collection Products 2",
 		"class": "spaced-section spaced-section--full-width",
 		"settings": [
 	
@@ -396,7 +411,7 @@
 			}
 		],
 		"presets": [{
-			"name": "Collection Products 1"
+			"name": "Collection Products 2"
 		}]
 	}
 	{% endschema %}
