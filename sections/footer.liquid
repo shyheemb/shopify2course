@@ -19,27 +19,27 @@
     <div class="row">
       <div class="col-md-9">
         <div class="row">
+          {%- for block in section.blocks -%}
           <div class="col-md-2">
-            <div class="footer__links"><span class="footer__column-title">Get Help</span><a href="#"
-                class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#"
-                class="footer__link">Link</a></div>
+            <div class="footer__links">
+              
+              <span class="footer__column-title">{{block.settings.heading}}</span>
+           
+              {%- for link in block.settings.menu.links -%}
+              <a href="{{ link.url }}"
+               class="footer__link">{{ link.title }}
+              </a>
+            {%- endfor -%}
+              </div>
           </div>
-          <div class="col-md-2">
-            <div class="footer__links"><span class="footer__column-title">Get Help</span><a href="#"
-                class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#"
-                class="footer__link">Link</a></div>
-          </div>
-          <div class="col-md-2">
-            <div class="footer__links"><span class="footer__column-title">Get Help</span><a href="#"
-                class="footer__link">Link</a><a href="#" class="footer__link">Link</a><a href="#"
-                class="footer__link">Link</a></div>
-          </div>
+          {%- endfor -%}
         </div>
       </div>
       <div class="col-md-3">
-        <div class="footer__extra"><span class="footer__column-title"> Sign Up For Newsletter</span>
-          
-            
+        <div class="footer__extra">
+          {% if section.settings.newsletter_enable != false %}
+          <span class="footer__column-title"> {{ section.settings.newsletter_heading }}</span>
+
             {%- form 'customer' -%}
             <input type="hidden" name="contact[tags]" value="newsletter">
             <div class="newsletter-form__field-wrapper">
@@ -75,28 +75,112 @@
               {%- endif -%}
             </div>
             {%- if form.posted_successfully? -%}
-              <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+              <h3 style="color: green; font-size: .9rem; text-align: center;">{{ 'newsletter.success' | t }}</h3>
             {%- endif -%}
           {%- endform -%}
-
+        {%- endif -%}
           <p>
-            <!-- -->lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor
-            sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor
-            sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+            {{ section.settings.footer_p  }}
           </p>
-          <div class="footer__social-icons"><a href="#" class="footer__social-link"><i
-                class="fa-brands fa-facebook-f"></i></a><a href="#" class="footer__social-link"><i
-                class="fa-brands fa-twitter"></i></a><a href="#" class="footer__social-link"><i
-                class="fa-brands fa-tiktok"></i></a><a href="#" class="footer__social-link"><i
-                class="fa-brands fa-youtube"></i></a></div>
+          {% if section.settings.show_social != false %}
+          <div class="footer__social-icons">
+
+            {% if settings.social_facebook_link != blank %}
+            <a href="{{ settings.social_facebook_link }}" class="footer__social-link"><i
+                class="fa-brands fa-facebook-f"></i>
+              </a>
+              {% endif %}
+              {%if settings.social_tiktok_link != blank%}
+                <a href="{{ settings.social_tiktok_link }}" class="footer__social-link"><i
+                class="fa-brands fa-tiktok"></i>
+              </a>
+            {% endif %}
+              
+                      {%if settings.social_google_link != blank%}
+                      
+                        <a class="footer__social-link" href="{{ settings.social_google_link }}" target="_blank">
+                            <i class="fa-brands fa-google" aria-hidden="true"></i>
+                        </a> 
+                    
+                        {% endif %}
+                  
+                    {%if settings.social_instagram_link != blank%}
+                    
+                        <a  class="footer__social-link" href="{{ settings.social_instagram_link }}" target="_blank">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                  
+                    {% endif %}
+                   
+                      {%if settings.social_twitter_link != blank%} 
+                     
+                        <a  class="footer__social-link" href="{{ settings.social_twitter_link }}" target="_blank">
+                            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+                        </a>
+                     
+                        {% endif %}
+                    
+                   
+                      {%if settings.social_youtube_link != blank%} 
+                   
+                        <a  class="footer__social-link" href="{{ settings.social_youtube_link }}" target="_blank">
+                            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                        </a>     
+                 
+                        {% endif %}
+               
+                   
+                      {%if settings.social_pinterest_link != blank%} 
+                      
+                        <a  class="footer__social-link" href="{{ settings.social_pinterest_link }}" target="_blank">
+                            <i class="fa-brands fa-pinterest" aria-hidden="true"></i>
+                        </a> 
+                      
+                        {% endif %}
+                   
+                    
+                      {%if settings.social_tumblr_link != blank%}
+                     
+                        <a  class="footer__social-link" href="{{ settings.social_tumblr_link }}" target="_blank">
+                            <i class="fa-brands fa-tumblr" aria-hidden="true"></i>
+                        </a>
+                        
+                        {% endif %}
+                    
+                   
+                      {%if settings.social_snapchat_link != blank%}
+                       
+                        <a  class="footer__social-link" href="{{ settings.snapchat_pinterest_link }}" target="_blank">
+                            <i class="fa-brands fa-snapchat" aria-hidden="true"></i>
+                        </a>
+                        
+                        {% endif %}
+                    
+                   
+                      {%if settings.social_vimeo_link != blank%}
+                      
+                        <a  class="footer__social-link" href="{{ settings.social_vimeo_link }}" target="_blank">
+                            <i class="fa-brands fa-vimeo" aria-hidden="true"></i>
+                        </a>  
+                     
+                    {% endif %}
+                
+              </div>
         </div>
+        {% endif %}
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="footer__bottom">
-          <div class="footer__copyright">© 2021 Company Name,LLC ALL Rights Reserved</div>
-          <div class="footer__extra-links"><a href="#">Link</a><a href="#">Link</a><a href="#">Link</a></div>
+          <div class="footer__copyright" style="color: white;"> 
+          &copy; {{ 'now' | date: "%Y" }}, {{ shop.name }} LLC ALL Rights Reserved</div>
+          <div class="footer__extra-links">
+            {%- for link in section.settings.footer_bottom_menu.links -%}
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            {%- endfor -%}
+           
+          </div>
         </div>
       </div>
     </div>
@@ -140,7 +224,7 @@
         {
           "type": "text",
           "id": "heading",
-          "default": "Quick links",
+          "default": "Get Help",
           "label": "t:sections.footer.blocks.link_list.settings.heading.label"
         },
         {
@@ -149,86 +233,6 @@
           "default": "footer",
           "label": "t:sections.footer.blocks.link_list.settings.menu.label",
           "info": "t:sections.footer.blocks.link_list.settings.menu.info"
-        }
-      ]
-    },
-    {
-      "type": "brand_information",
-      "name": "t:sections.footer.blocks.brand_information.name",
-      "settings": [
-        {
-          "type": "paragraph",
-          "content": "t:sections.footer.blocks.brand_information.settings.paragraph.content"
-        },
-        {
-          "type": "header",
-          "content": "t:sections.footer.blocks.brand_information.settings.header__1.content"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_social",
-          "default": true,
-          "label": "t:sections.footer.blocks.brand_information.settings.show_social.label",
-          "info": "t:sections.footer.blocks.brand_information.settings.show_social.info"
-        }
-      ]
-    },
-    {
-      "type": "text",
-      "name": "t:sections.footer.blocks.text.name",
-      "settings": [
-        {
-          "type": "text",
-          "id": "heading",
-          "default": "Heading",
-          "label": "t:sections.footer.blocks.text.settings.heading.label"
-        },
-        {
-          "type": "richtext",
-          "id": "subtext",
-          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
-          "label": "t:sections.footer.blocks.text.settings.subtext.label"
-        }
-      ]
-    },
-    {
-      "type": "image",
-      "name": "Image",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "range",
-          "id": "image_width",
-          "min": 50,
-          "max": 550,
-          "step": 5,
-          "unit": "px",
-          "label": "Image width",
-          "default": 100
-        },
-        {
-          "type": "select",
-          "id": "alignment",
-          "label": "Image alignment on large screen",
-          "options": [
-            {
-              "value": "",
-              "label": "Left"
-            },
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            }
-          ],
-          "default": "center"
         }
       ]
     }
@@ -248,8 +252,14 @@
     {
       "type": "text",
       "id": "newsletter_heading",
-      "default": "Subscribe to our emails",
+      "default": "Sign Up For Newsletter",
       "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "textarea",
+      "id": "footer_p",
+      "label": "Extra Info",
+      "default": "Welcome to my shop!"
     },
     {
       "type": "header",
@@ -261,6 +271,15 @@
       "id": "show_social",
       "default": true,
       "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+
+      "type": "link_list",
+    
+      "id": "footer_bottom_menu",
+    
+      "label": "Bottom Menu"
+    
     },
     {
       "type": "header",
@@ -305,9 +324,6 @@
     "blocks": [
       {
         "type": "link_list"
-      },
-      {
-        "type": "text"
       }
     ]
   }

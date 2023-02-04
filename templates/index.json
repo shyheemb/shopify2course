@@ -51,16 +51,15 @@
         "516a296e-f50a-4fbe-a8c2-e3ce52dcf3a9"
       ],
       "settings": {
-        "container_shape": "circle",
+        "container_shape": "square",
         "image_fit": "contain",
         "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
-        "show_colors": true,
         "xxl_col": "col-xxl-3",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-6",
         "sm_col": "col-sm-6"
       }
     },
@@ -106,6 +105,7 @@
         "show_title": true,
         "show_price": true,
         "show_colors": true,
+        "color_shape": "circle",
         "xxl_col": "col-xxl-4",
         "xl_col": "col-xl-4",
         "lg_col": "col-lg-4",
@@ -128,6 +128,26 @@
         "button_label2": "Womens",
         "button_link2": ""
       }
+    },
+    "64e6be00-910e-45d8-9ef7-2082abd7baa2": {
+      "type": "collection-product-single-two",
+      "settings": {
+        "collection": "nike",
+        "total_products": 16,
+        "container_shape": "square",
+        "image_fit": "contain",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "show_colors": true,
+        "color_shape": "square",
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-6",
+        "sm_col": "col-sm-6"
+      }
     }
   },
   "order": [
@@ -135,6 +155,7 @@
     "826c4e9d-ff57-4329-82b3-b98287c8d243",
     "b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a",
     "f9f5b31e-8e62-4ba5-839b-59955f3b02f9",
-    "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c"
+    "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c",
+    "64e6be00-910e-45d8-9ef7-2082abd7baa2"
   ]
 }
