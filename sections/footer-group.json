@@ -37,7 +37,10 @@
         "newsletter_heading": "Subscribe to our emails",
         "footer_p": "Join Our Newsletter For best deals",
         "show_social": true,
+<<<<<<< HEAD
         "footer_bottom_menu": "",
+=======
+>>>>>>> 785b1ad414ee8331f7d9344c0bc95d8e200a7e33
         "margin_top": 48,
         "padding_top": 36,
         "padding_bottom": 36

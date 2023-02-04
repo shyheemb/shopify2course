@@ -4,8 +4,13 @@
     "theme_name": "Venti",
     "theme_version": "1.0",
     "theme_author": "Shyheem burrows",
+<<<<<<< HEAD
     "theme_documentation_url": "https://shyheemcodes.com/",
     "theme_support_url": "https://shyheemcodes.com/"
+=======
+    "theme_documentation_url": "https:\/\/shyheemcodes.com\/",
+    "theme_support_url": "https:\/\/shyheemcodes.com\/"
+>>>>>>> 785b1ad414ee8331f7d9344c0bc95d8e200a7e33
   },
   {
     "name": "t:settings_schema.logo.name",
