@@ -1,79 +1,22 @@
 {
   "sections": {
-    "a31aa2f3-4285-4aab-91c0-8dc36e87ffc0": {
-      "type": "hero-two",
-      "settings": {
-        "hero_height": "100vh",
-        "image1": "shopify:\/\/shop_images\/pexels-photo-6626903.jpg",
-        "background1": "#f61212",
-        "opacity1": 29,
-        "button_label1": "Mens",
-        "button_link1": "",
-        "image2": "shopify:\/\/shop_images\/pexels-photo-10479007.webp",
-        "background2": "#deff15",
-        "opacity2": 31,
-        "button_label2": "Womens",
-        "button_link2": ""
-      }
-    },
-    "826c4e9d-ff57-4329-82b3-b98287c8d243": {
-      "type": "collection-group",
-      "blocks": {
-        "f31e2a0f-9056-4c3c-b87d-955294dd966a": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "dr-martens"
-          }
-        },
-        "fd6b2aca-be0e-4a53-9bb7-7ebad1fc9c29": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "nike"
-          }
-        },
-        "4d385e40-bff6-4d31-a800-8d1a248d1a1b": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "supra"
-          }
-        },
-        "516a296e-f50a-4fbe-a8c2-e3ce52dcf3a9": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "timberland"
-          }
-        }
-      },
-      "block_order": [
-        "f31e2a0f-9056-4c3c-b87d-955294dd966a",
-        "fd6b2aca-be0e-4a53-9bb7-7ebad1fc9c29",
-        "4d385e40-bff6-4d31-a800-8d1a248d1a1b",
-        "516a296e-f50a-4fbe-a8c2-e3ce52dcf3a9"
-      ],
-      "settings": {
-        "container_shape": "square",
-        "image_fit": "contain",
-        "background": "#ffffff",
-        "opacity": 100,
-        "show_title": true,
-        "xxl_col": "col-xxl-3",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-6",
-        "sm_col": "col-sm-6"
-      }
-    },
-    "b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a": {
+    "667e851e-9dc7-4c7e-b735-a35fa70304c5": {
       "type": "hero-one",
       "blocks": {
-        "template--17728417268027__b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a-167518984557e6e4f4-0": {
+        "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-0": {
           "type": "heading",
           "settings": {
-            "title": "25% OFF SPring sale",
-            "title_size": "lg"
+            "title": "Title",
+            "title_size": "md"
           }
         },
-        "template--17728417268027__b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a-167518984557e6e4f4-2": {
+        "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-1": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+          }
+        },
+        "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-2": {
           "type": "button",
           "settings": {
             "button_link": "",
@@ -82,61 +25,86 @@
         }
       },
       "block_order": [
-        "template--17728417268027__b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a-167518984557e6e4f4-0",
-        "template--17728417268027__b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a-167518984557e6e4f4-2"
+        "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-0",
+        "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-1",
+        "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-2"
       ],
       "settings": {
-        "hero_height": "25vh",
-        "image": "shopify:\/\/shop_images\/pexels-photo-947422.jpg",
+        "hero_height": "100vh",
         "background": "#000000",
         "opacity": 50,
         "info_alignment": "center"
       }
     },
-    "f9f5b31e-8e62-4ba5-839b-59955f3b02f9": {
-      "type": "collection-product-single",
+    "c8eb08d8-450a-48c8-999f-0d44fa500240": {
+      "type": "collection-group",
+      "blocks": {
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-3": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-0",
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-1",
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-2",
+        "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-3"
+      ],
       "settings": {
-        "collection": "nike",
-        "total_products": 6,
         "container_shape": "rectangle",
-        "image_fit": "contain",
+        "image_fit": "cover",
         "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
-        "show_price": true,
-        "show_colors": true,
-        "color_shape": "circle",
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-4",
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
         "sm_col": "col-sm-6"
       }
     },
-    "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c": {
+    "4d7a6fe5-73ae-437d-aa50-1e627c8d56cc": {
       "type": "hero-two",
       "settings": {
         "hero_height": "50vh",
-        "image1": "shopify:\/\/shop_images\/gentlemans-fashion-flatlay.jpg",
-        "background1": "#ff2b2b",
-        "opacity1": 28,
-        "button_label1": "Mens",
+        "background1": "#000000",
+        "opacity1": 50,
+        "button_label1": "Button label",
         "button_link1": "",
-        "image2": "shopify:\/\/shop_images\/summer-gingham-fashion-flatlay.jpg",
-        "background2": "#334fb4",
-        "opacity2": 28,
-        "button_label2": "Womens",
+        "background2": "#000000",
+        "opacity2": 50,
+        "button_label2": "Button label",
         "button_link2": ""
       }
     },
-    "64e6be00-910e-45d8-9ef7-2082abd7baa2": {
-      "type": "collection-product-single-two",
+    "18461b01-086c-45f4-a718-f6aca10aa441": {
+      "type": "collection-product-single",
       "settings": {
-        "collection": "nike",
+        "collection": "",
         "total_products": 16,
-        "container_shape": "square",
-        "image_fit": "contain",
-        "background": "#ffffff",
+        "container_shape": "rectangle",
+        "image_fit": "cover",
+        "background": "#EDEFF5",
         "opacity": 100,
         "show_title": true,
         "show_price": true,
@@ -144,18 +112,118 @@
         "color_shape": "square",
         "xxl_col": "col-xxl-3",
         "xl_col": "col-xl-3",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-6",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
         "sm_col": "col-sm-6"
+      }
+    },
+    "d8b22111-ce98-4c48-b90f-237acfda3763": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "13b1f631-0c8b-430f-84f1-32ed9dae7ac3": {
+      "type": "hero-two",
+      "settings": {
+        "hero_height": "50vh",
+        "background1": "#000000",
+        "opacity1": 50,
+        "button_label1": "Button label",
+        "button_link1": "",
+        "background2": "#000000",
+        "opacity2": 50,
+        "button_label2": "Button label",
+        "button_link2": ""
+      }
+    },
+    "b2245d74-20c7-459d-8245-84bc025e3a43": {
+      "type": "collection-product-single-two",
+      "settings": {
+        "collection": "",
+        "total_products": 16,
+        "container_shape": "rectangle",
+        "image_fit": "cover",
+        "background": "#EDEFF5",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "show_colors": true,
+        "color_shape": "square",
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
+    },
+    "bbce1e73-8975-403c-9dec-3453852098e7": {
+      "type": "hero-one",
+      "blocks": {
+        "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Title",
+            "title_size": "md"
+          }
+        },
+        "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-1": {
+          "type": "paragraph",
+          "disabled": true,
+          "settings": {
+            "paragraph": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+          }
+        },
+        "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-2": {
+          "type": "button",
+          "settings": {
+            "button_link": "",
+            "button_text": "View More"
+          }
+        }
+      },
+      "block_order": [
+        "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-0",
+        "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-1",
+        "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-2"
+      ],
+      "settings": {
+        "hero_height": "25vh",
+        "background": "#000000",
+        "opacity": 50,
+        "info_alignment": "center"
       }
     }
   },
   "order": [
-    "a31aa2f3-4285-4aab-91c0-8dc36e87ffc0",
-    "826c4e9d-ff57-4329-82b3-b98287c8d243",
-    "b36ffa7f-e5d4-4ca7-813e-0f3ac5b02b5a",
-    "f9f5b31e-8e62-4ba5-839b-59955f3b02f9",
-    "2f72ad6e-1c9a-4c0b-a61a-c7ba1493732c",
-    "64e6be00-910e-45d8-9ef7-2082abd7baa2"
+    "667e851e-9dc7-4c7e-b735-a35fa70304c5",
+    "c8eb08d8-450a-48c8-999f-0d44fa500240",
+    "4d7a6fe5-73ae-437d-aa50-1e627c8d56cc",
+    "18461b01-086c-45f4-a718-f6aca10aa441",
+    "d8b22111-ce98-4c48-b90f-237acfda3763",
+    "13b1f631-0c8b-430f-84f1-32ed9dae7ac3",
+    "b2245d74-20c7-459d-8245-84bc025e3a43",
+    "bbce1e73-8975-403c-9dec-3453852098e7"
   ]
 }
