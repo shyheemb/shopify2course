@@ -1,7 +1,66 @@
+{{ 'Mobile1.css' | asset_url | stylesheet_tag }}
+<section id="mobile-menu" class="active">
+  <div class="logo">
+    <div class="closing-mobile-menu"><i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    <a href="{{ routes.root_url }}">
+      {%- if settings.logo != blank -%}
+        {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+        {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+        {{ settings.logo | image_url: width: 500 | image_tag:
+          class: 'header__heading-logo motion-reduce',
+          widths: '50, 100, 150, 200, 250, 300, 400, 500',
+          height: logo_height,
+          width: settings.logo_width,
+          alt: logo_alt
+        }}
+      {%- else -%}
+        {{ shop.name }}
+      {%- endif -%}
+    </a>
+  </div>
+  <ul class="menu ">
+    {%- if section.settings.menu_mobile != blank -%}
+      {%- for link in section.settings.menu_mobile.links -%}
+        {%- if link.links == blank -%}
+    <li class="link">
+      <a href="{{ link.url }}">{{ link.title | escape }} </a>
+    </li>
+      {% else %}
+    <li class="link dropdown">
+      <a href="{{ link.url }}">{{ link.title | escape }} </a>
+      <ul class="sub-menu">
+        {%- for childlink in link.links -%}
+        <a class="sub-link" href="{{ childlink.url }}"> {{ childlink.title | escape }}</a>
+        {% endfor %}
+      </ul>
+    </li>
+       {% endif %}
+    {% endfor -%}
+  {% endif %}
+  </ul>
+  <ul class="menu ">
+    <li class="link dropdown">
+      <div class="sub-menu">
+        <a  class="sub-link" href="{{ routes.cart_url }}">
+          <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      {%- if shop.customer_accounts_enabled -%}
+        <a class="sub-link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}
+        {{ routes.account_login_url }}{%- endif -%}" {% if section.settings.menu != blank %} small-hide{% endif %}">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      {%- endif -%}
+        </div>
+    </li>
+  </ul>
+</section>
+
 {% case section.settings.header_type %} 
 
 {% when'header1' %}
-
+{{ 'Header1.css' | asset_url | stylesheet_tag }}
+<!-- STARTING HEADER 1 -->
 <header class="header header1">
   
   <ul class="header1__collections-nav">
@@ -66,6 +125,7 @@
   <a href="{{ routes.cart_url }}">
       <i class="fa-solid fa-cart-shopping"></i>
   </a>
+
   
     {%- if shop.customer_accounts_enabled -%}
       <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}
@@ -75,10 +135,12 @@
     {%- endif -%}
     
   </ul>
+  <ul class="header__collections-mobile-nav"><li class="open-mobile-menu"><i class="fa fa-bars"></i></li></ul>
 </header>
 
 {% when'header2' %}
-
+<!-- STARTING HEADER 2 -->
+{{ 'Header2.css' | asset_url | stylesheet_tag }}
 <header class="header header2">
   <div class="header2__logo">
     <a href="{{ routes.root_url }}">
@@ -130,10 +192,12 @@
     {%- endif -%}
     
   </div>
+  <ul class="header__collections-mobile-nav"><li class="open-mobile-menu"><i class="fa fa-bars"></i></li></ul>
 </header>
 
 {% when'header3' %}
-
+<!-- STARTING HEADER 3 -->
+{{ 'Header3.css' | asset_url | stylesheet_tag }}
 <header class="header header3">
   <div class="header3__logo">
     <a href="{{ routes.root_url }}">
@@ -184,10 +248,48 @@
     {%- endif -%}
    
   </ul>
+  <ul class="header__collections-mobile-nav"><li class="open-mobile-menu"><i class="fa fa-bars"></i></li></ul>
 </header>
 
 {% endcase %} 
 
+<script src="{{ 'zepto.min.js' | asset_url }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<script src="{{ 'mobile1.js' | asset_url }}"></script>
+<script>
+  // Get body element
+  const bodyTag = $('body');
+  const headerWrapper = $('#shopify-section-header');
+  // check for class fixed-nav
+  if(bodyTag.hasClass('fixed-nav')) {
+    // change styles of header wrapper
+    headerWrapper.css('position','fixed')
+    headerWrapper.css('top', 0);
+    headerWrapper.css('left', 0);
+    headerWrapper.css('width', '100%');
+    headerWrapper.css('z-index', '7');
+    
+    if(bodyTag.hasClass('transparent-nav')) {
+      // remove class of transparent bg when scrolled
+      const onScroll = () => {
+        const scrollLocation = document.documentElement.scrollTop;
+
+        if(scrollLocation > 5) {
+          bodyTag.removeClass('transparent-nav')
+        } else {
+          bodyTag.addClass('transparent-nav')
+        }
+      }
+
+      window.addEventListener('scroll', onScroll)
+    }
+    
+  }
+</script>
 
 {% schema %} 
 {
@@ -233,6 +335,12 @@
       "id": "menu_two",
       "default": "main-menu",
       "label": "Alternate Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_mobile",
+      "default": "main-menu",
+      "label": "Mobile Menu"
     }
   ]
 }

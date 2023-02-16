@@ -4,13 +4,36 @@
     "theme_name": "Venti",
     "theme_version": "1.0",
     "theme_author": "Shyheem burrows",
-<<<<<<< HEAD
-    "theme_documentation_url": "https://shyheemcodes.com/",
-    "theme_support_url": "https://shyheemcodes.com/"
-=======
     "theme_documentation_url": "https:\/\/shyheemcodes.com\/",
     "theme_support_url": "https:\/\/shyheemcodes.com\/"
->>>>>>> 785b1ad414ee8331f7d9344c0bc95d8e200a7e33
+  },
+  {
+    "name": "Header Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Global Styles"
+      },
+      {
+        "type": "color",
+        "id": "header_bg",
+        "default": "#f7f9fd",
+        "label": "Body Background",
+        "info": "This is the background color for the whole site"
+      },
+      {
+        "type": "checkbox",
+        "id": "header_sticky",
+        "label": "Stick Header To The Top",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "header_transparent",
+        "label": "Header Transparent",
+        "default": true
+      }
+    ]
   },
   {
     "name": "t:settings_schema.logo.name",

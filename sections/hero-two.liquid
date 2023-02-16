@@ -1,5 +1,6 @@
-<div class="hero hero2 hero2--{{ section.settings.hero_height }}">
-	<div class="hero2__collection1">
+{{ 'Hero2.css' | asset_url | stylesheet_tag }}
+<div class="hero hero2 ">
+	<div class="hero2__collection1" style="height:{{ section.settings.hero_height }};">
 		{%- if section.settings.image1 != blank -%}
       <img srcset="{%- if section.settings.image1.width >= 165 -%}{{ section.settings.image1 | img_url: '165x' }} 165w,{%- endif -%}
         {%- if section.settings.image1.width >= 360 -%}{{ section.settings.image1 | img_url: '360x' }} 360w,{%- endif -%}
@@ -28,7 +29,7 @@
 			{%- endif -%}
 		</div>
 	</div>
-	<div class="hero2__collection2">
+	<div class="hero2__collection2" style="height:{{ section.settings.hero_height }};">
 		{%- if section.settings.image2 != blank -%}
       <img srcset="{%- if section.settings.image2.width >= 165 -%}{{ section.settings.image2 | img_url: '165x' }} 165w,{%- endif -%}
         {%- if section.settings.image2.width >= 360 -%}{{ section.settings.image2 | img_url: '360x' }} 360w,{%- endif -%}

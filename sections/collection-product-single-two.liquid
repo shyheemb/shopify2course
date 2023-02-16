@@ -1,3 +1,4 @@
+{{ 'Collection3.css' | asset_url | stylesheet_tag }}
 {% if section.settings.collection.all_products_count %}
 	<div class="collection collection3">
 		<div class="container">
@@ -59,7 +60,9 @@
 								{%- if section.settings.show_price == true -%}
 								<span class="collection3__product-price">
 									{{product.price | money_with_currency}}
-								</span>
+								{%if product.price_varies == false and product.compare_at_price_varies %}
+									{% render 'price', product: product %}
+								{%- endif -%}	
 								{%- endif -%}
 							</div>
 							{%if section.settings.show_colors  == true %}
