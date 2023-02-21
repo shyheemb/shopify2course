@@ -31,6 +31,7 @@
       ],
       "settings": {
         "hero_height": "100vh",
+        "image": "shopify:\/\/shop_images\/pexels-photo-947422.jpg",
         "background": "#000000",
         "opacity": 50,
         "info_alignment": "center"
@@ -42,25 +43,25 @@
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-0": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "nike"
           }
         },
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "puma"
           }
         },
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "dr-martens"
           }
         },
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "supra"
           }
         }
       },
@@ -71,8 +72,8 @@
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-3"
       ],
       "settings": {
-        "container_shape": "rectangle",
-        "image_fit": "cover",
+        "container_shape": "square",
+        "image_fit": "contain",
         "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
@@ -87,10 +88,12 @@
       "type": "hero-two",
       "settings": {
         "hero_height": "50vh",
+        "image1": "shopify:\/\/shop_images\/pexels-photo-6626903.jpg",
         "background1": "#000000",
         "opacity1": 50,
         "button_label1": "Button label",
         "button_link1": "",
+        "image2": "shopify:\/\/shop_images\/pexels-photo-10479007.webp",
         "background2": "#000000",
         "opacity2": 50,
         "button_label2": "Button label",
@@ -100,20 +103,20 @@
     "18461b01-086c-45f4-a718-f6aca10aa441": {
       "type": "collection-product-single",
       "settings": {
-        "collection": "",
-        "total_products": 16,
+        "collection": "nike",
+        "total_products": 6,
         "container_shape": "rectangle",
-        "image_fit": "cover",
-        "background": "#edeff5",
+        "image_fit": "contain",
+        "background": "#ffffff",
         "opacity": 100,
         "show_title": true,
         "show_price": true,
         "show_colors": true,
-        "color_shape": "square",
-        "xxl_col": "col-xxl-3",
-        "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "color_shape": "circle",
+        "xxl_col": "col-xxl-4",
+        "xl_col": "col-xl-4",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-6",
         "sm_col": "col-sm-6"
       }
     },
@@ -148,10 +151,12 @@
       "type": "hero-two",
       "settings": {
         "hero_height": "50vh",
+        "image1": "shopify:\/\/shop_images\/gentlemans-fashion-flatlay.jpg",
         "background1": "#000000",
         "opacity1": 50,
         "button_label1": "Button label",
         "button_link1": "",
+        "image2": "shopify:\/\/shop_images\/summer-gingham-fashion-flatlay.jpg",
         "background2": "#000000",
         "opacity2": 50,
         "button_label2": "Button label",
@@ -184,7 +189,7 @@
         "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-0": {
           "type": "heading",
           "settings": {
-            "title": "Title",
+            "title": "25% OFF",
             "title_size": "md"
           }
         },
@@ -210,6 +215,7 @@
       ],
       "settings": {
         "hero_height": "25vh",
+        "image": "shopify:\/\/shop_images\/pexels-photo-947422.jpg",
         "background": "#000000",
         "opacity": 50,
         "info_alignment": "center"

@@ -11,8 +11,9 @@
       "type": "header",
       "settings": {
         "header_type": "header1",
-        "menu": "main-menu",
-        "menu_two": "main-menu"
+        "menu": "main-menu-2",
+        "menu_two": "footer",
+        "menu_mobile": "main-menu-2"
       }
     }
   },
