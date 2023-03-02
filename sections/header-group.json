@@ -4,6 +4,21 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
+      "disabled": true,
+      "blocks": {
+        "392fa18c-caeb-4e9f-bc90-6c5fd17f770e": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "background_color": "#605e7d",
+            "announcement_text_color": "#FFFFFF",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "392fa18c-caeb-4e9f-bc90-6c5fd17f770e"
+      ],
       "settings": {
       }
     },

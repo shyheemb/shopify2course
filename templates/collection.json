@@ -5,11 +5,101 @@
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
-        "color_scheme": "background-1"
+        "color_scheme": "inverse"
+      }
+    },
+    "774e8dad-973a-4699-8cbf-1ff8542aa225": {
+      "type": "collection-product-single-two",
+      "settings": {
+        "collection": "nike",
+        "total_products": 16,
+        "container_shape": "square",
+        "image_fit": "contain",
+        "background": "#ffffff",
+        "opacity": 100,
+        "show_title": true,
+        "show_price": true,
+        "show_colors": true,
+        "color_shape": "circle",
+        "xxl_col": "col-xxl-3",
+        "xl_col": "col-xl-3",
+        "lg_col": "col-lg-3",
+        "md_col": "col-md-3",
+        "sm_col": "col-sm-6"
+      }
+    },
+    "13f736f0-4b92-427d-9776-c8c263072652": {
+      "type": "featured-product",
+      "blocks": {
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-1": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-2": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-3": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-4": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-5": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-6": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-0",
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-1",
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-2",
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-3",
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-4",
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-5",
+        "template--17785116721467__13f736f0-4b92-427d-9776-c8c263072652-1677776775ef416dbc-6"
+      ],
+      "settings": {
+        "product": "adidas-classic-backpack",
+        "color_scheme": "background-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": false,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "hover",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
@@ -17,7 +107,9 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
+        "enable_quick_add": false,
         "enable_filtering": true,
+        "filter_type": "horizontal",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
@@ -27,6 +119,8 @@
   },
   "order": [
     "banner",
+    "774e8dad-973a-4699-8cbf-1ff8542aa225",
+    "13f736f0-4b92-427d-9776-c8c263072652",
     "product-grid"
   ]
 }
