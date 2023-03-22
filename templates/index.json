@@ -79,8 +79,8 @@
         "show_title": true,
         "xxl_col": "col-xxl-3",
         "xl_col": "col-xl-3",
-        "lg_col": "col-lg-3",
-        "md_col": "col-md-3",
+        "lg_col": "col-lg-4",
+        "md_col": "col-md-4",
         "sm_col": "col-sm-6"
       }
     },
