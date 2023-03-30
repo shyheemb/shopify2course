@@ -25,7 +25,7 @@
       {% assign opacity = section.settings.opacity | divided_by: 100.00 %}
       <div class="hero1__content-container" 
         style="background-color: {{ section.settings.background | color_modify: 'alpha', opacity  }}">
-        <div class="hero1__info">
+        <div class="hero1__info hero1__info--aligned-{{ section.settings.text_alignment }}">
             {%- for block in section.blocks -%}
                 {% case block.type %}
                   {%- when 'heading' -%}
@@ -120,7 +120,27 @@
 			],
 			"default": "center",
 			"label": "Content Alignment"
-		}	
+		}
+		,
+		{
+			"type": "select",
+			"id": "text_alignment",
+			"options": [{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			],
+			"default": "center",
+			"label": "Text Alignment"
+		}
 	],
 	"blocks": [{
 			"type": "heading",

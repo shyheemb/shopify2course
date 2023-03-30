@@ -61,7 +61,7 @@
 {% when'header1' %}
 {{ 'Header1.css' | asset_url | stylesheet_tag }}
 <!-- STARTING HEADER 1 -->
-<header class="header header1">
+<header class="header header1" style="background:{{settings.header_bg}};">
   
   <ul class="header1__collections-nav">
     {%- if section.settings.menu != blank -%}
@@ -141,7 +141,7 @@
 {% when'header2' %}
 <!-- STARTING HEADER 2 -->
 {{ 'Header2.css' | asset_url | stylesheet_tag }}
-<header class="header header2">
+<header class="header header2" style="background:{{settings.header_bg}};">
   <div class="header2__logo">
     <a href="{{ routes.root_url }}">
       {%- if settings.logo != blank -%}
@@ -194,11 +194,87 @@
   </div>
   <ul class="header__collections-mobile-nav"><li class="open-mobile-menu"><i class="fa fa-bars"></i></li></ul>
 </header>
-
+{% when'header4' %}
+  <!-- STARTING HEADER 4 -->
+  {{ 'Header4.css' | asset_url | stylesheet_tag }}
+  <header class="header header4" style="background:{{settings.header_bg}};">
+   
+    <ul class="header4__collections-nav">
+      {%- if section.settings.menu != blank -%}
+        {%- for link in section.settings.menu.links -%}
+          {%- if link.links == blank -%}
+      <li class="header4__collection-link">
+        <a href="{{ link.url }}">{{ link.title | escape }} </a>
+      </li>
+        {% else %}
+      <li class="header4__collection-link">
+        <a href="{{ link.url }}">{{ link.title | escape }} <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="collection-link__sub-links">
+          {%- for childlink in link.links -%}
+          <li><a href="{{ childlink.url }}"> {{ childlink.title | escape }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+         {% endif %}
+      {% endfor -%}
+    {% endif %}
+    </ul> 
+    <div class="header4__logo" style="background:{{settings.header_bg}};">
+      <a href="{{ routes.root_url }}">
+        {%- if settings.logo != blank -%}
+          {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%} 
+          {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+          {{ settings.logo | image_url: width: 500 | image_tag:
+            class: 'header__heading-logo motion-reduce',
+            widths: '50, 100, 150, 200, 250, 300, 400, 500',
+            height: logo_height,
+            width: settings.logo_width,
+            alt: logo_alt
+          }}
+        {%- else -%}
+          {{ shop.name }}
+        {%- endif -%}
+      </a>
+    </div>
+    <ul class="header4__collections-nav">
+      {%- if section.settings.menu_two != blank -%}
+        {%- for link in section.settings.menu_two.links -%}
+          {%- if link.links == blank -%}
+      <li class="header4__collection-link">
+        <a href="{{ link.url }}">{{ link.title | escape }} </a>
+      </li>
+        {% else %}
+      <li class="header4__collection-link">
+        <a href="{{ link.url }}">{{ link.title | escape }} <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="collection-link__sub-links">
+          {%- for childlink in link.links -%}
+          <li><a href="{{ childlink.url }}"> {{ childlink.title | escape }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+         {% endif %}
+      {% endfor -%}
+    {% endif %}
+      
+    <a href="{{ routes.cart_url }}">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+  
+    
+      {%- if shop.customer_accounts_enabled -%}
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}
+        {{ routes.account_login_url }}{%- endif -%}" {% if section.settings.menu != blank %} small-hide{% endif %}">
+        <i class="fa-solid fa-user"></i>
+      </a>
+      {%- endif -%}
+      
+    </ul>
+    <ul class="header__collections-mobile-nav"><li class="open-mobile-menu"><i class="fa fa-bars"></i></li></ul>
+  </header>
 {% when'header3' %}
 <!-- STARTING HEADER 3 -->
 {{ 'Header3.css' | asset_url | stylesheet_tag }}
-<header class="header header3">
+<header class="header header3" style="background:{{settings.header_bg}};">
   <div class="header3__logo">
     <a href="{{ routes.root_url }}">
       {%- if settings.logo != blank -%}
@@ -313,8 +389,13 @@
           "value": "header3",
           "label": "Header3"
         }
+        ,
+        {
+          "value": "header4",
+          "label": "Header4"
+        }
       ],
-      "default": "header1"
+      "default": "header4"
     },
     {
       "type": "header",

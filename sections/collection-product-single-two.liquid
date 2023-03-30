@@ -10,11 +10,40 @@
 						<div class="collection3__product-img collection3__product-img--{{section.settings.container_shape}} 
 						collection3__product-img--{{section.settings.image_fit}}" 
 						style="background-color: {{ section.settings.background | color_modify: 'alpha', opacity  }}">
+							{% comment %} 
 							<div class="collection3__heart"
 								{% if section.settings.container_shape == "circle" %}
 									style="top: 35px; right: 60px;"
-									{% endif %}
-							><i class="far fa-heart"></i></div>
+									{% endif %}>
+								<i class="far fa-heart"></i>
+							</div>
+							<div class="collection3__badges"><i class="far fa-heart"></i></div> 
+						{% endcomment %}
+						
+						<div class="collection3__badges"{% if section.settings.container_shape == "circle" %}
+							style="top: 35px; right: 60px;"
+							{% endif %}>
+						
+						{% comment %} Checks if product is on Sale  {% endcomment %}
+						{% if product.compare_at_price > product.price %}
+							{% assign Sale = true %}
+							{%- else -%}
+							{% assign Sale = false %}
+						{%- endif -%}
+						
+						{%- if product.available == true -%}
+						{% comment %} will run if product is not Sale  {% endcomment %}
+						{%- if Sale == false -%}
+						
+					{%- endif -%}
+						{% comment %} will run if product is on Sale  {% endcomment %}
+					{%- if Sale == true -%}
+							<div class="collection3__badges-sale">Sale</div> 
+						{%- endif -%}
+						{%- else -%}
+						<div class="collection3__badges-sold">Sold out </div>
+					   {%- endif -%}
+							</div>
 							{%- if product.images[0] != blank -%}
 							  <a href="{{product.url}}" class="img-link">
 									<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
@@ -58,11 +87,38 @@
 								</span>
 								{%- endif -%}
 								{%- if section.settings.show_price == true -%}
+								
+								
+								{% comment %} Checks if product is on Sale  {% endcomment %}
+								{% if product.compare_at_price > product.price %}
+									{% assign Sale = true %}
+									{%- else -%}
+									{% assign Sale = false %}
+								{%- endif -%}
+								
+								{%- if product.available == true -%}
+								{% comment %} will run if product is not Sale  {% endcomment %}
+								{%- if Sale == false -%}
 								<span class="collection3__product-price">
-									{{product.price | money_with_currency}}
-								{%if product.price_varies == false and product.compare_at_price_varies %}
-									{% render 'price', product: product %}
-								{%- endif -%}	
+									{{product.price | money_with_currency}}	
+								</span>
+							{%- endif -%}
+                                {% comment %} will run if product is on Sale  {% endcomment %}
+							{%- if Sale == true -%}
+									<span class="collection3__product-price" style="text-decoration: line-through;
+										font-size: .8rem;
+										margin-right: 10px;">
+									{{product.compare_at_price | money_with_currency}}
+									</span>
+									<span class="collection3__product-price" style="color: red;">
+									{{product.price | money_with_currency}}	
+								    </span>
+								{%- endif -%}
+								{%- else -%}
+								<span class="collection3__product-price">
+									Sold Out
+								</span>
+							   {%- endif -%}
 								{%- endif -%}
 							</div>
 							{%if section.settings.show_colors  == true %}
@@ -148,6 +204,7 @@
 						<div class="collection3__collection-item">
 							<div class="collection3__product-img collection3__product-img--rectangle">
 								<div class="collection3__heart"><i class="far fa-heart"></i></div>
+								
 								<img srcset="{%- if product.images[0].width >= 165 -%}{{ product.images[0]  | img_url: '165x' }} 165w,{%- endif -%}
 										{%- if product.images[0].width >= 360 -%}{{ product.images[0] | img_url: '360x' }} 360w,{%- endif -%}
 										{%- if product.images[0].width >= 535 -%}{{ product.images[0] | img_url: '535x' }} 535w,{%- endif -%}

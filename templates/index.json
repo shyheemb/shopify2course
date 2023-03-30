@@ -6,21 +6,21 @@
         "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-0": {
           "type": "heading",
           "settings": {
-            "title": "Title",
+            "title": "Elevate Your Wardrobe with Quanteea",
             "title_size": "md"
           }
         },
         "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-1": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text."
+            "paragraph": "At Quanteea's, we understand that being a mom doesn't mean you have to sacrifice style. That's why we've curated a selection of trendy and practical products for busy moms on-the-go. From sunglasses to shoes, beauty products to accessories, we've got everything you need to look and feel your best. Shop now and elevate your wardrobe with Quanteea."
           }
         },
         "template--17785116819771__667e851e-9dc7-4c7e-b735-a35fa70304c5-1675560922fe4692b6-2": {
           "type": "button",
           "settings": {
-            "button_link": "",
-            "button_text": "View More"
+            "button_link": "shopify:\/\/collections",
+            "button_text": "Shop Now"
           }
         }
       },
@@ -31,10 +31,11 @@
       ],
       "settings": {
         "hero_height": "100vh",
-        "image": "shopify:\/\/shop_images\/pexels-photo-947422.jpg",
-        "background": "#000000",
+        "image": "shopify:\/\/shop_images\/fall-fashion-on-black-brick.jpg",
+        "background": "#907070",
         "opacity": 50,
-        "info_alignment": "center"
+        "info_alignment": "left",
+        "text_alignment": "left"
       }
     },
     "c8eb08d8-450a-48c8-999f-0d44fa500240": {
@@ -55,13 +56,13 @@
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "dr-martens"
+            "collection": "supra"
           }
         },
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "supra"
+            "collection": "dr-martens"
           }
         }
       },
@@ -72,7 +73,7 @@
         "template--17785116819771__c8eb08d8-450a-48c8-999f-0d44fa500240-1675560961ecc1c252-3"
       ],
       "settings": {
-        "container_shape": "square",
+        "container_shape": "rectangle",
         "image_fit": "contain",
         "background": "#ffffff",
         "opacity": 100,
@@ -88,78 +89,15 @@
       "type": "hero-two",
       "settings": {
         "hero_height": "50vh",
-        "image1": "shopify:\/\/shop_images\/pexels-photo-6626903.jpg",
-        "background1": "#000000",
+        "image1": "shopify:\/\/shop_images\/model-poses-with-neon-reflection.jpg",
+        "background1": "#907070",
         "opacity1": 50,
-        "button_label1": "Button label",
+        "button_label1": "Womens",
         "button_link1": "",
-        "image2": "shopify:\/\/shop_images\/pexels-photo-10479007.webp",
-        "background2": "#000000",
+        "image2": "shopify:\/\/shop_images\/casually-dressed-man-at-the-beach.jpg",
+        "background2": "#746767",
         "opacity2": 50,
-        "button_label2": "Button label",
-        "button_link2": ""
-      }
-    },
-    "18461b01-086c-45f4-a718-f6aca10aa441": {
-      "type": "collection-product-single",
-      "settings": {
-        "collection": "nike",
-        "total_products": 6,
-        "container_shape": "rectangle",
-        "image_fit": "contain",
-        "background": "#ffffff",
-        "opacity": 100,
-        "show_title": true,
-        "show_price": true,
-        "show_colors": true,
-        "color_shape": "circle",
-        "xxl_col": "col-xxl-4",
-        "xl_col": "col-xl-4",
-        "lg_col": "col-lg-4",
-        "md_col": "col-md-6",
-        "sm_col": "col-sm-6"
-      }
-    },
-    "d8b22111-ce98-4c48-b90f-237acfda3763": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "nike",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "13b1f631-0c8b-430f-84f1-32ed9dae7ac3": {
-      "type": "hero-two",
-      "settings": {
-        "hero_height": "50vh",
-        "image1": "shopify:\/\/shop_images\/gentlemans-fashion-flatlay.jpg",
-        "background1": "#000000",
-        "opacity1": 50,
-        "button_label1": "Button label",
-        "button_link1": "",
-        "image2": "shopify:\/\/shop_images\/summer-gingham-fashion-flatlay.jpg",
-        "background2": "#000000",
-        "opacity2": 50,
-        "button_label2": "Button label",
+        "button_label2": "Mens",
         "button_link2": ""
       }
     },
@@ -189,7 +127,7 @@
         "template--17785116819771__bbce1e73-8975-403c-9dec-3453852098e7-1675560922fe4692b6-0": {
           "type": "heading",
           "settings": {
-            "title": "25% OFF",
+            "title": "25% OFF spring SALE",
             "title_size": "md"
           }
         },
@@ -215,10 +153,11 @@
       ],
       "settings": {
         "hero_height": "25vh",
-        "image": "shopify:\/\/shop_images\/pexels-photo-947422.jpg",
+        "image": "shopify:\/\/shop_images\/pexels-photo-10479007.webp",
         "background": "#000000",
         "opacity": 50,
-        "info_alignment": "center"
+        "info_alignment": "center",
+        "text_alignment": "center"
       }
     }
   },
@@ -226,9 +165,6 @@
     "667e851e-9dc7-4c7e-b735-a35fa70304c5",
     "c8eb08d8-450a-48c8-999f-0d44fa500240",
     "4d7a6fe5-73ae-437d-aa50-1e627c8d56cc",
-    "18461b01-086c-45f4-a718-f6aca10aa441",
-    "d8b22111-ce98-4c48-b90f-237acfda3763",
-    "13b1f631-0c8b-430f-84f1-32ed9dae7ac3",
     "b2245d74-20c7-459d-8245-84bc025e3a43",
     "bbce1e73-8975-403c-9dec-3453852098e7"
   ]
