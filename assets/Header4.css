@@ -1,0 +1,100 @@
+.header4 {
+    background: #2F2523;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    height: 84px
+}
+
+.header4 a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: 600;
+    transition: all ease-in-out .4s
+}
+
+.header4 a:hover {
+    color: #EBB8B1;
+}
+
+.header4__collections-nav {
+    margin-bottom: 0;
+    padding-left: 0
+}
+
+.header4__collections-nav a {
+    display: inline-block;
+    padding-right: 20px
+}
+
+.header4__collection-link {
+    display: inline-block;
+    position: relative
+}
+
+.header4__collection-link .collection-link__sub-links {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 23px;
+    left: 0;
+    background: #2F2523;
+    padding: 20px 0;
+    min-width: 150px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+    transition: all .3s ease-in-out;
+    z-index: 5
+}
+
+.header4__collection-link .collection-link__sub-links a {
+    color: #fff;
+    font-size: .9rem;
+    display: block;
+    padding: 10px 20px
+}
+
+.header4__collection-link .collection-link__sub-links a:hover {
+    color: #EBB8B1;
+}
+
+.header4__collection-link:hover .collection-link__sub-links {
+    opacity: 1;
+    visibility: visible
+}
+
+.header4__logo {
+    width: 170px;
+    height: 154px;
+    background: #2F2523;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    top: 2rem;
+    z-index: 4
+}
+
+.header4__logo a {
+    font-size: 2rem;
+    font-family: "Playball", cursive;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+
+@media(min-width: 576px)and (max-width: 767px) {
+    .header4__collections-nav {
+        display: none
+    }
+}
+
+@media(min-width: 1px)and (max-width: 575px) {
+    .header4__collections-nav {
+        display: none
+    }
+}

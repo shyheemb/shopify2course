@@ -17,9 +17,9 @@
       {
         "type": "color",
         "id": "header_bg",
-        "default": "#f7f9fd",
-        "label": "Body Background",
-        "info": "This is the background color for the whole site"
+        "default": "#2F2523",
+        "label": "Header Background",
+        "info": "This is the background color for the header"
       },
       {
         "type": "checkbox",

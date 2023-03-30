@@ -1,7 +1,8 @@
 {
   "current": {
     "header_sticky": true,
-    "logo_width": 120,
+    "logo": "shopify:\/\/shop_images\/dwc-logo.png_1.png",
+    "logo_width": 190,
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -120,10 +121,10 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
-    "cart_type": "notification",
+    "cart_type": "page",
     "show_vendor": false,
-    "show_cart_note": false,
-    "cart_drawer_collection": "",
+    "show_cart_note": true,
+    "cart_drawer_collection": "nike",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
