@@ -2,27 +2,25 @@
 
 /* tablet */
 @media (min-width: 768px) and (max-width: 991px) {
-  .hero1--aligned-left .hero1__content-container {
-    justify-content: flex-start;
-    padding: 1rem;
-    text-align: left;
+ .hero1__content-container {
+    
+    padding: 0rem !important;
+  
 }
 }
 
 /* large phones */
 @media (min-width: 576px) and (max-width: 767px) {
-    .hero1--aligned-center .hero1__content-container {
-        justify-content: center;
-        padding: 0rem;
-        text-align: center;
+   .hero1__content-container {
+       
+        padding: 0rem !important;
+       
     }  
 }
 
 /* small phones */
 @media (min-width: 1px) and (max-width: 575px) {
-    .hero1--aligned-right .hero1__content-container {
-        justify-content: flex-end;
-        padding: 1rem;
-        text-align: right;
+     .hero1__content-container {
+        padding: 0rem !important;
     }  
 }
